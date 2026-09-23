@@ -9,15 +9,17 @@ import androidx.navigation.navArgument
 import com.kiara.navegacion.screens.DetailScreen
 import com.kiara.navegacion.screens.HomeScreen
 import com.kiara.navegacion.screens.ListScreen
+import com.kiara.navegacion.screens.LoginScreen
 import com.kiara.navegacion.screens.ProfileScreen
 
 @Composable
 fun AppNavigation() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = Screen.Home.route) {
+    NavHost(navController = navController, startDestination = Screen.Login.route) {
         composable(Screen.Home.route) { HomeScreen(navController) }
         composable(Screen.List.route) { ListScreen(navController) }
+        composable(Screen.Login.route) { LoginScreen(navController) }
         composable(
             route = Screen.Detail.route,
             arguments = listOf(navArgument("itemId") { type = NavType.IntType })
