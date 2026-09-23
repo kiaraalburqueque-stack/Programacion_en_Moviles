@@ -89,8 +89,8 @@ fun InicioScreen(
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(16.dp)
-                        verticalAligment = Alignment.CenterVertically
+                            .padding(16.dp),
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
                         Icon(
                             imageVector = Icons.Filled.Person,
