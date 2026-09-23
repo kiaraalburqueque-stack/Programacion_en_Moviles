@@ -160,7 +160,10 @@ fun ClinicaSaludApp() {
                 }
 
                 composable(RUTA_MIS_CITAS) {
-                    MisCitasScreen(citas = citas)
+                    MisCitasScreen(
+                        citas = citas,
+                        onCancelarCita = { cita -> citas.remove(cita) }
+                    )
                 }
 
                 composable(RUTA_HISTORIAL) {
