@@ -103,11 +103,11 @@ fun ProfileScreen() {
             modifier = Modifier.size(80.dp).background(Color(0xFFE0F2E9), CircleShape),
             contentAlignment = Alignment.Center
         ) {
-            Text("DR", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Color(0xFF006C4C))
+            Text("KA", fontSize = 24.sp, fontWeight = FontWeight.Bold, color = Color(0xFF006C4C))
         }
 
         Spacer(modifier = Modifier.height(12.dp))
-        Text("Diego Ramos", fontSize = 18.sp, fontWeight = FontWeight.Bold)
+        Text("Kiara Alburqueque", fontSize = 18.sp, fontWeight = FontWeight.Bold)
         Text("Plan Premium", color = Color.Gray, fontSize = 14.sp)
 
         Spacer(modifier = Modifier.height(24.dp))

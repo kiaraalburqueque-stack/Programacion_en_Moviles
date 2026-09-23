@@ -32,7 +32,7 @@ fun HomeScreen(onClassSelected: (String) -> Unit) {
         ) {
             Column(modifier = Modifier.padding(16.dp)) {
                 Text("TECSUP Fit", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color.White)
-                Text("Hola, Diego", fontSize = 14.sp, color = Color.White.copy(alpha = 0.8f))
+                Text("Hola, Kiara", fontSize = 14.sp, color = Color.White.copy(alpha = 0.8f))
             }
         }
 
