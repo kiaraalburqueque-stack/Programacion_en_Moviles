@@ -202,7 +202,7 @@ private fun ResumenYBoton(
         Spacer(Modifier.height(16.dp))
 
         BotonPrimario(
-            texto = "Continuar pedido",
+            texto = "Proceder al pago",
             onClick = onContinuarPedido
         )
     }
