@@ -70,7 +70,7 @@ fun BienvenidaScreen(
         Spacer(Modifier.height(12.dp))
 
         Text(
-            text = "Tus productos de siempre\nen la puerta de tu casa",
+            text = "Tu bodega de confianza a un toque",
             style = MaterialTheme.typography.bodyLarge,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             textAlign = TextAlign.Center
