@@ -1,6 +1,6 @@
 ---
 
-## 🧠 VI. Preguntas de Reflexión
+## VI. Preguntas de Reflexión
 
 ### 1. ¿Por qué `Producto.kt` y `MainActivity.kt` se entregaron completos, y las pantallas no? ¿Qué tienen en común los archivos que sí se dejaron como esqueleto?
 `Producto.kt` y `MainActivity.kt` se entregaron completos porque constituyen el **contrato de datos global** y el **punto de entrada base** del proyecto, asegurando una estructura uniforme en el modelo entidad y la configuración del tema. 
@@ -28,7 +28,7 @@ Al integrar la lógica sugerida por la IA para el buscador, se ajustaron tres pu
 
 ---
 
-## 📝 VII. Observaciones y Conclusiones
+## VII. Observaciones y Conclusiones
 
 ### Observaciones
 1. **Gestión de permisos y dependencias para contenido remoto:** Durante la integración de la librería Coil (`AsyncImage`), Android bloqueaba las peticiones HTTP/HTTPS si no se agregaba explícitamente el permiso `android.permission.INTERNET` en el `AndroidManifest.xml` o si faltaba sincronizar la dependencia en `build.gradle.kts`.
