@@ -27,7 +27,7 @@ fun DatosEntregaScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "Datos de Entrega", style = MaterialTheme.typography.headlineMedium)
+        Text(text = "Información de Envío", style = MaterialTheme.typography.headlineMedium)
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onConfirmarPedido) {
             Text("Confirmar Pedido")
