@@ -1,48 +1,46 @@
 package com.tecsup.mibodega.ui.cliente.modelo
 
-/**
- * Datos de ejemplo (fake) para mostrar la UI sin base de datos.
- * Cuando conecten Room o una API, este archivo se reemplaza por
- * un Repository real, pero las pantallas no cambian porque ya
- * reciben una List<Producto> como parámetro.
- */
-val listaCategorias = listOf("Todos", "Bebidas", "Abarrotes", "Snacks")
+val listaCategorias = listOf("Todos", "Bebidas", "Abarrotes", "Dulces", "Snacks")
 
 val listaProductosFake = listOf(
     Producto(
         id = 1,
         nombre = "Arroz Costeño",
-        descripcion = "Arroz extra, grano largo, ideal para el día a día.",
+        descripcion = "Arroz extra, grano largo, ideal para tus comidas.",
         precio = 4.50,
-        categoria = "Abarrotes"
+        categoria = "Abarrotes",
+        imagenUrl = "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=300"
     ),
     Producto(
         id = 2,
         nombre = "Aceite Primor",
-        descripcion = "Aceite vegetal 1 L, alto en vitamina E.",
+        descripcion = "Aceite vegetal 1 L, alto en vitaminas.",
         precio = 8.90,
-        categoria = "Abarrotes"
+        categoria = "Abarrotes",
+        imagenUrl = "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=300"
     ),
     Producto(
         id = 3,
         nombre = "Leche Gloria",
         descripcion = "Leche evaporada entera 1 L.",
         precio = 5.20,
-        categoria = "Abarrotes"
+        categoria = "Abarrotes",
+        imagenUrl = "https://images.unsplash.com/photo-1563636619-e9143da7973b?w=300"
     ),
     Producto(
         id = 4,
         nombre = "Galleta Oreo",
-        descripcion = "Galletas de chocolate rellenas 126 g.",
+        descripcion = "Galletas de chocolate rellenas 126g.",
         precio = 3.50,
-        categoria = "Snacks"
+        categoria = "Snacks",
+        imagenUrl = "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=300"
     ),
     Producto(
         id = 5,
-        nombre = "Coca-Cola Original",
-        descripcion = "Bebida gaseosa sabor cola. Ideal para compartir en familia.",
+        nombre = "Coca-Cola 1.5L",
+        descripcion = "Bebida gaseosa sabor original 1.5 L.",
         precio = 6.50,
-        categoria = "Bebidas"
+        categoria = "Bebidas",
+        imagenUrl = "https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=300"
     )
 )
-
