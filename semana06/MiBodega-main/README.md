@@ -1,6 +1,45 @@
+# 🛒 Mi Bodega - Aplicación Móvil (Cliente)
+
+Proyecto desarrollado para la gestión de compras y pedidos en bodegas locales a través de una interfaz moderna, intuitiva y asistida por IA.
+
 ---
 
-## VI. Preguntas de Reflexión
+## 📋 Cuestionario del Proyecto / Preguntas de Evaluación
+
+### 1. ¿Cuál es el propósito de la aplicación y a quién está dirigida?
+La aplicación **Mi Bodega** busca digitalizar la experiencia de compra en bodegas de barrio. Está dirigida a clientes finales que desean realizar pedidos de productos de primera necesidad, abarrotes y bebidas desde su smartphone con entrega a domicilio.
+
+### 2. ¿Cuál es el Tech Stack y las librerías principales utilizadas?
+* **Lenguaje:** Kotlin.
+* **UI Framework:** Jetpack Compose con **Material 3** para un diseño moderno y reactivo.
+* **Carga de Imágenes:** **Coil** (`io.coil-kt:coil-compose`) para la descarga e integración asíncrona de imágenes de productos desde URL remota.
+* **Navegación:** `androidx.navigation:navigation-compose` para el flujo entre pantallas.
+* **Control de Versiones:** Git / GitHub (Ramas `main` y `mejora-con-ia`).
+
+### 3. ¿Cómo está estructurado el proyecto?
+El proyecto sigue una arquitectura organizada por componentes y pantallas (`ui/`):
+* `ui/cliente/modelo/`: Contiene el modelo de datos `Producto.kt` y el proveedor estático `DatosFake.kt`.
+* `ui/componentes/`: Componentes reutilizables como `ProductoCard.kt` para el grid de productos.
+* `ui/cliente/screens/`: Pantallas principales del flujo (Bienvenida, Registro, Inicio, Detalle, Carrito, Entrega y Confirmación).
+
+### 4. ¿Cómo se integró la Inteligencia Artificial (IA) en la aplicación?
+Se implementó un módulo de recomendación inteligente en la pantalla de inicio ("Sugerencia de IA para ti"). Este banner analiza combinaciones frecuentes de compra (por ejemplo: Coca-Cola + Galletas Oreo con 10% de descuento) para incentivar la venta cruzada e incrementar el valor del ticket promedio.
+
+### 5. ¿Cuáles son las 7 pantallas del flujo completo del cliente?
+1. **Registro / Login:** Pantalla de bienvenida con acceso vía número telefónico.
+2. **Registro de datos:** Formulario de perfil con nombre, teléfono, dirección y referencia.
+3. **Inicio / Productos:** Catálogo dinámico organizado por categorías, buscador y recomendación por IA.
+4. **Detalle del producto:** Vista ampliada con descripción, selector de cantidad y botón de agregar al carrito.
+5. **Carrito de compras:** Resumen de productos elegidos, cálculo automático de subtotal, delivery y total.
+6. **Dirección y pago:** Confirmación de datos de envío y selección de método de pago (Efectivo contraentrega, Yape, Plin).
+7. **Pedido confirmado:** Pantalla final de éxito con el resumen del pedido `#1024` y accesos directos al estado del pedido.
+
+### 6. ¿Cómo se gestionaron los datos y el estado de la app?
+La gestión de datos se realiza mediante un modelo centralizado `Producto` con parámetros flexibilizados (`id`, `nombre`, `descripcion`, `precio`, `categoria`, `imagenUrl`) y una lista reactiva en `DatosFake.kt`. El estado del carrito y la selección de ítems se maneja mediante estados componibles de Jetpack Compose (`remember`, `mutableStateOf`).
+
+---
+
+## 🧠 VI. Preguntas de Reflexión
 
 ### 1. ¿Por qué `Producto.kt` y `MainActivity.kt` se entregaron completos, y las pantallas no? ¿Qué tienen en común los archivos que sí se dejaron como esqueleto?
 `Producto.kt` y `MainActivity.kt` se entregaron completos porque constituyen el **contrato de datos global** y el **punto de entrada base** del proyecto, asegurando una estructura uniforme en el modelo entidad y la configuración del tema. 
@@ -28,7 +67,7 @@ Al integrar la lógica sugerida por la IA para el buscador, se ajustaron tres pu
 
 ---
 
-## VII. Observaciones y Conclusiones
+## 📝 VII. Observaciones y Conclusiones
 
 ### Observaciones
 1. **Gestión de permisos y dependencias para contenido remoto:** Durante la integración de la librería Coil (`AsyncImage`), Android bloqueaba las peticiones HTTP/HTTPS si no se agregaba explícitamente el permiso `android.permission.INTERNET` en el `AndroidManifest.xml` o si faltaba sincronizar la dependencia en `build.gradle.kts`.
@@ -37,3 +76,11 @@ Al integrar la lógica sugerida por la IA para el buscador, se ajustaron tres pu
 ### Conclusiones
 1. **Desarrollo sobre esquema vs. desarrollo desde cero:** Desarrollar a partir de un esqueleto en la Fase 2 acelera la maquetación y mantiene estándares de código. No obstante, exige un análisis previo de la arquitectura existente para comprender el flujo de datos antes de añadir nuevas funcionalidades.
 2. **Eficiencia del modelo declarativo en Jetpack Compose:** El paradigma declarativo simplifica la construcción de aplicaciones reactivas. La separación entre modelo (`Producto`), componentes reutilizables (`ProductoCard`) y pantallas asegura un código mantenible donde la UI refleja fielmente el estado de la aplicación.
+
+---
+
+## 🛠️ Instrucciones de Ejecución
+
+1. Clonar el repositorio:
+   ```bash
+   git clone [https://github.com/kiaraalburqueque-stack/Programacion_en_Moviles.git](https://github.com/kiaraalburqueque-stack/Programacion_en_Moviles.git)
