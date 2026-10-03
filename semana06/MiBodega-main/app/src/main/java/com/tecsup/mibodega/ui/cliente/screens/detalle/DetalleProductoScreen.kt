@@ -103,7 +103,7 @@ fun DetalleProductoScreen(
             Spacer(Modifier.weight(1f))
 
             BotonPrimario(
-                texto = "Agregar al carrito",
+                texto = "Añadir al carrito de compras",
                 onClick = { onAgregarAlCarrito(producto, cantidad) }
             )
 
