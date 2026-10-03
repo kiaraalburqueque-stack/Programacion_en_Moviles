@@ -25,7 +25,7 @@ fun ConfirmacionScreen(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text(text = "¡Pedido Confirmado!", style = MaterialTheme.typography.headlineMedium)
+        Text(text = "¡Pedido Confirmado! (Llega en 15 - 30 min)", style = MaterialTheme.typography.headlineMedium)
         Spacer(modifier = Modifier.height(16.dp))
         Button(onClick = onVolverInicio) {
             Text("Volver al Inicio")
